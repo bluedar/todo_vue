@@ -66,17 +66,17 @@ onMounted(() => {
   <main class="app">
     <section class="greeting">
       <h1 class="title">
-        What's Up<input type="text" placeholder="name here" v-model="name" />
+        What's Up<input type="text" placeholder="여기 이름!" v-model="name" />
       </h1>
     </section>
     <section class="create-todo">
-      <h2>CREATE A TODO</h2>
+      <h2>할일 만들기</h2>
       <form id="new-todo-form" v-on:submit.prevent="addTodo">
         <h4>당신이 해야할일은?</h4>
         <input
           type="text"
           id="content"
-          placeholder="e.g vue project finish"
+          placeholder="해야할일을 적어주세요"
           v-model="input_content"
         />
         <!--{{ input_content }} -->
@@ -109,7 +109,7 @@ onMounted(() => {
       </form>
     </section>
     <section class="todo-list">
-      <h3>TODO LIST</h3>
+      <h3>할일 리스트</h3>
       <div class="list" id="todo-list">
         <div
           v-for="todo in todos_asc"
